@@ -395,6 +395,9 @@ html, html body {
 }
 }
 
+.fanta_title-up, .fanta_title-up-2, .fanta_title-up-3, .fanta_title-down, .fanta_title-down-2, .fanta_title-down-3{
+    display: none;
+}
 @media only screen and (max-width:800px ) and (min-width:720px){
 
        #orange_sliced_nav{
