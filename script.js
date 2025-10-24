@@ -10,22 +10,39 @@ gsap.from(".nav-link",{
     duration:1
 })
 
-var tl = gsap.timeline({scrollTrigger:{
+gsap.registerPlugin(ScrollTrigger);
+
+let mm = gsap.matchMedia();
+
+mm.add(
+    {
+         isDesktop: "(min-width: 551px)",
+         isMobile: "(max-width: 768px)"
+    },
+     (context) => {
+    // Destructure variables
+    let { isDesktop, isMobile } = context.conditions;
+
+    // Create a timeline
+   var tl = gsap.timeline({scrollTrigger:{
        trigger:".title_page",
        scroller:"body",
        start:"50% 45%",
     //    end:"100% 45%",
        scrub:1,
-}})
+}});
 
-tl.to("#fanta",{
+    // Desktop animation
+    if (isDesktop) {
+     tl.to("#fanta",{
     top:"122%",
     left:"3.5%",
 },'orange')
 
 tl.to("#orange_sliced_main",{
    top:"166%",
-   left:"22%"
+   left:"22%",
+   rotate:"360",
 },'orange')
 
 tl.to("#orange_bunch",{
@@ -40,6 +57,71 @@ tl.to("#leaf",{
    width:"15%",
    rotate:"40"
 },'orange')
+
+    }
+
+    // Mobile animation
+    if (isMobile) {
+     tl.to("#fanta",{
+    top:"115%",
+    left:"2%",
+},'orange')
+
+tl.to("#orange_sliced_main",{
+   top:"140%",
+   left:"45%",
+   rotate:"360",
+},'orange')
+
+tl.to("#orange_bunch",{
+   top:"187%",
+   left:"0%",
+   width:"35%",
+},'orange')
+
+tl.to("#leaf",{
+   top:"110%",
+   left:"75%",
+   width:"35%",
+   rotate:"40"
+},'orange')
+
+    }
+  }
+
+);
+
+// var tl = gsap.timeline({scrollTrigger:{
+//        trigger:".title_page",
+//        scroller:"body",
+//        start:"50% 45%",
+//     //    end:"100% 45%",
+//        scrub:1,
+// }})
+
+// tl.to("#fanta",{
+//     top:"122%",
+//     left:"3.5%",
+// },'orange')
+
+// tl.to("#orange_sliced_main",{
+//    top:"166%",
+//    left:"22%",
+//    rotate:"360",
+// },'orange')
+
+// tl.to("#orange_bunch",{
+//    top:"159%",
+//    left:"85%",
+//    width:"15%",
+// },'orange')
+
+// tl.to("#leaf",{
+//    top:"120%",
+//    left:"75%",
+//    width:"15%",
+//    rotate:"40"
+// },'orange')
 
 var tl2 = gsap.timeline({scrollTrigger:{
        trigger:".page3",
@@ -85,7 +167,8 @@ tl2.to("#fanta",{
 tl2.to("#orange_sliced_main",{
    top:"204%",
     left:"42.6%",
-    width:"14.5%"
+    width:"14.5%",
+    rotate:"90",
 },'orange_roll')
 
 var tl3 = gsap.timeline({scrollTrigger:{
@@ -100,7 +183,8 @@ var tl3 = gsap.timeline({scrollTrigger:{
 tl3.to("#orange_sliced_main",{
     top:"315%",
     left:"4%",
-    width:"9%"
+    width:"9%",
+    rotate:"360"
 })
 
 gsap.to(".page4 #page4-heading",{
@@ -140,3 +224,12 @@ gsap.to("#pg4_orange",{
         scrub:2,
     }
 },'orange_scroll')
+
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
