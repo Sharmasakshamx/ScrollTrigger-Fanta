@@ -32,6 +32,7 @@ mm.add(
        scrub:1,
 }});
 
+
     // Desktop animation
     if (isDesktop) {
      tl.to("#fanta",{
@@ -87,6 +88,101 @@ tl.to("#leaf",{
 },'orange')
 
     }
+
+    var tl2 = gsap.timeline({scrollTrigger:{
+       trigger:".page3",
+       scroller:"body",
+       start:"-7% 50%",
+       end:"40% 40%",
+       scrub:1,
+    //    markers:true,
+}});
+
+if(isDesktop)
+{
+//  for tl2
+
+tl2.from("#cola_orange",{
+    rotate:"-90",
+    top:"-10%",
+    left:"-30%",    
+},'orange_roll')
+
+tl2.from("#pepsi_orange",{
+    rotate:"90",
+    top:"-10%",
+    right:"-30%",    
+}, 'orange_roll')
+
+tl2.from("#pepsi",{
+    rotate:"30",
+    top:"-2%",
+    right:"-10%",    
+}, 'orange_roll')
+
+tl2.from("#cola",{
+    rotate:"-30",
+    top:"-2%",
+    left:"-10%",    
+}, 'orange_roll')
+
+tl2.to("#fanta",{
+    top:"2.5%",
+    left:"35%",
+    width:"30%"
+},'orange_roll')
+
+tl2.to("#orange_sliced_main",{
+   top:"204%",
+    left:"42.6%",
+    width:"14.5%",
+    rotate:"90",
+},'orange_roll')
+
+}
+
+if(isMobile)
+{
+// for tl2
+
+tl2.from("#cola_orange",{
+    rotate:"-90",
+    top:"-10%",
+    left:"-30%",    
+},'orange_roll')
+
+tl2.from("#pepsi_orange",{
+    rotate:"90",
+    top:"-10%",
+    right:"-30%",    
+}, 'orange_roll')
+
+tl2.from("#pepsi",{
+    rotate:"30",
+    top:"-2%",
+    right:"-10%",    
+}, 'orange_roll')
+
+tl2.from("#cola",{
+    rotate:"-30",
+    top:"-2%",
+    left:"-10%",    
+}, 'orange_roll')
+
+tl2.to("#fanta",{
+    top:"234.5%",
+    left:"29%",
+    width:"42%"
+},'orange_roll')
+
+tl2.to("#orange_sliced_main",{
+   top:"243%",
+    left:"49%",
+    width:"14.5%",
+    rotate:"90",
+},'orange_roll')
+
+}
   }
 
 );
@@ -123,53 +219,53 @@ tl.to("#leaf",{
 //    rotate:"40"
 // },'orange')
 
-var tl2 = gsap.timeline({scrollTrigger:{
-       trigger:".page3",
-       scroller:"body",
-       start:"-7% 50%",
-       end:"40% 40%",
-       scrub:1,
-    //    markers:true,
-}})
+// var tl2 = gsap.timeline({scrollTrigger:{
+//        trigger:".page3",
+//        scroller:"body",
+//        start:"-7% 50%",
+//        end:"40% 40%",
+//        scrub:1,
+//     //    markers:true,
+// }})
 
-//  start(-7% 50%) -> this means that first value is for the strt point on trigger page which is page3 here and 2nd value is start point of the body
+// //  start(-7% 50%) -> this means that first value is for the strt point on trigger page which is page3 here and 2nd value is start point of the body
 
-tl2.from("#cola_orange",{
-    rotate:"-90",
-    top:"-10%",
-    left:"-30%",    
-},'orange_roll')
+// tl2.from("#cola_orange",{
+//     rotate:"-90",
+//     top:"-10%",
+//     left:"-30%",    
+// },'orange_roll')
 
-tl2.from("#pepsi_orange",{
-    rotate:"90",
-    top:"-10%",
-    right:"-30%",    
-}, 'orange_roll')
+// tl2.from("#pepsi_orange",{
+//     rotate:"90",
+//     top:"-10%",
+//     right:"-30%",    
+// }, 'orange_roll')
 
-tl2.from("#pepsi",{
-    rotate:"30",
-    top:"-2%",
-    right:"-10%",    
-}, 'orange_roll')
+// tl2.from("#pepsi",{
+//     rotate:"30",
+//     top:"-2%",
+//     right:"-10%",    
+// }, 'orange_roll')
 
-tl2.from("#cola",{
-    rotate:"-30",
-    top:"-2%",
-    left:"-10%",    
-}, 'orange_roll')
+// tl2.from("#cola",{
+//     rotate:"-30",
+//     top:"-2%",
+//     left:"-10%",    
+// }, 'orange_roll')
 
-tl2.to("#fanta",{
-    top:"213.5%",
-    left:"35%",
-    width:"30%"
-},'orange_roll')
+// tl2.to("#fanta",{
+//     top:"2.5%",
+//     left:"35%",
+//     width:"30%"
+// },'orange_roll')
 
-tl2.to("#orange_sliced_main",{
-   top:"204%",
-    left:"42.6%",
-    width:"14.5%",
-    rotate:"90",
-},'orange_roll')
+// tl2.to("#orange_sliced_main",{
+//    top:"204%",
+//     left:"42.6%",
+//     width:"14.5%",
+//     rotate:"90",
+// },'orange_roll')
 
 var tl3 = gsap.timeline({scrollTrigger:{
        trigger:".page3",
