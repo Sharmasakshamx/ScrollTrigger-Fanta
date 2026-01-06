@@ -127,7 +127,7 @@ tl2.from("#cola",{
 }, 'orange_roll')
 
 tl2.to("#fanta",{
-    top:"2.5%",
+    top:"212.5%",
     left:"35%",
     width:"30%"
 },'orange_roll')
@@ -170,7 +170,8 @@ tl2.from("#cola",{
 }, 'orange_roll')
 
 tl2.to("#fanta",{
-    top:"234.5%",
+    // top:"234.5%",
+    top:"256.5%",
     left:"29%",
     width:"42%"
 },'orange_roll')
